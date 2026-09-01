@@ -1,0 +1,24 @@
+#include <stdio.h>
+// converts base 10 integer to binary
+int main()
+{
+    int num;
+    printf("Enter an integer in base 10 : ");
+    scanf("%d", &num);
+    int temp = num;
+    
+    int place  = 1;
+    int b_n = 0;
+    
+    while(temp != 0)
+    {
+        b_n = b_n + ((temp%2)*place);
+        place = place * 10;
+        
+        temp = temp / 2;
+    }
+    
+    printf("%d", b_n);
+    
+    return 0; 
+}
