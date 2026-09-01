@@ -1,0 +1,32 @@
+#include <stdio.h>
+// numbers that are not in binary if entered will return 0
+int main()
+{
+    int b_n;
+    printf("enter a number in binary");
+    scanf("%d", &b_n);
+    
+    int temp = b_n;
+    int sum = 0;
+    int count = -1;
+    int exp_2 = 1;
+    
+    while (temp != 0)
+    {
+        int d = temp % 10;
+        ++count;
+        if(d == 1)
+        {
+            for(int i = 0; i < count; i++)
+            {
+                exp_2 = exp_2 *2;
+            }
+            sum = sum + exp_2;
+            
+           exp_2 = 1;
+        }
+        temp = temp/10;
+    }
+    printf("%d in decimal is : %d", b_n, sum);
+    
+}
