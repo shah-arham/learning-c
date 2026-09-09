@@ -2,7 +2,7 @@
 // program capable of basic differentiation implemented through first principles derivative
 double f_x(double x)
 {
-    return 3*x*x*x;
+    return 3*x*x*x; // function to differentitate can be modified over here
 }
 
 
