@@ -1,0 +1,25 @@
+#include <stdio.h>
+// program capable of basic differentiation implemented through first principles derivative
+double f_x(double x)
+{
+    return 3*x*x*x;
+}
+
+
+int main()
+{
+    double resolution;
+    printf("Enter resolution : ");
+    scanf("%lf", &resolution);
+
+    double h = 1.0/resolution;
+
+    double a;
+    printf("enter point at which you would like to take derivative at ");
+    scanf("%lf", &a);
+
+    double derivative = (f_x(a+h) - f_x(a-h)) / (2*h);
+    printf("The derivative is : %lf", derivative);
+    return 0;
+}
+
